@@ -9,6 +9,9 @@ app.use(express.json());
 
 app.use('/api/contact', contactRoutes);
 
+app.use(cors({
+    origin: 'https://frontend-portfolio-three-pi.vercel.app/',
+}));
 app.listen(5000, () => {
     console.log('Server running on port 5000');
 });
